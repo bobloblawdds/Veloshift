@@ -72,11 +72,11 @@ Profiles/settings are stored locally in macOS preferences. The app has no accoun
 Uses SwiftUI, CoreBluetooth, Network.framework, and Carbon hotkeys. No external Swift dependencies. Install Xcode Command Line Tools (`xcode-select --install`), then run from the repository root:
 
 ```bash
-./scripts/build-app.sh
+bash scripts/build-app.sh
 swift run VeloxChecks
 ```
 
-The app is built at `dist/Veloshift.app`. `VeloxCore`, `VeloxChecks`, and the `Sources/Velox` directory retain their original internal names for now. Run `./scripts/package-release.sh` to build, check, sign locally, and create a release ZIP and SHA-256 checksum in `dist/`.
+The app is built at `dist/Veloshift.app`. `VeloxCore`, `VeloxChecks`, and the `Sources/Velox` directory retain their original internal names for now. Run `bash scripts/package-release.sh` to build, check, sign locally, and create a release ZIP and SHA-256 checksum in `dist/`.
 
 The checks cover protocol packets, actual local TCP discovery/control, controller edge handling, road-load calculations, profile persistence/deletion, and keyboard scoping. All **29 check groups** passed locally in debug and release. Native UI checks covered the companion layout, profile editor, and branded header; they do not replace hardware or Zwift keyboard testing.
 
